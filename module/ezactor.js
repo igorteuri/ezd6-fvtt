@@ -62,7 +62,7 @@ export default class EZActor extends Actor {
                             speaker: speaker,
                             content: msg
                         }
-                        ChatMessage.create(chatOptions);
+                        diceRoll.toMessage(chatOptions);
                     }
                 }
             }
@@ -91,7 +91,7 @@ export default class EZActor extends Actor {
                             speaker: speaker,
                             content: msg
                         }
-                        ChatMessage.create(chatOptions);
+                        diceRoll.toMessage(chatOptions);
                     }
                 }
             }
@@ -231,7 +231,7 @@ export default class EZActor extends Actor {
                 speaker: ChatMessage.getSpeaker({ actor: this })
             }
 
-            ChatMessage.create(chatOptions);
+            diceRoll.toMessage(chatOptions);
         }
     };
 
@@ -262,7 +262,7 @@ export default class EZActor extends Actor {
                 speaker: ChatMessage.getSpeaker({ actor: this })
             }
 
-            ChatMessage.create(chatOptions);
+            diceRoll.toMessage(chatOptions);
 
             await this.update({"system.herodice": --this.system.herodice});
         }
@@ -343,7 +343,7 @@ export default class EZActor extends Actor {
                 speaker: ChatMessage.getSpeaker({ actor: this })
             }
     
-            ChatMessage.create(chatOptions);
+            diceRoll.toMessage(chatOptions);
         }
     }
 
@@ -403,7 +403,7 @@ export default class EZActor extends Actor {
                 speaker: ChatMessage.getSpeaker({ actor: this })
             }
     
-            ChatMessage.create(chatOptions);
+            diceRoll.toMessage(chatOptions);
         }
 
     }
